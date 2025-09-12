@@ -60,3 +60,9 @@ User → Agent API → FAISS (local) → LLM (OpenAI via LangChain) → (optiona
 
 Assumes Python 3.10+, pip, and a local FAISS index of PDF embeddings.
 
+1. Clone repo:
+
+```bash
+git clone https://github.com/summitdevx-labs/rag-agent-demo.git
+cd rag-agent-demo
+
