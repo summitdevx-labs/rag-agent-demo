@@ -1,0 +1,72 @@
+Requirement Document: Experimental AI Agent
+1. Objective
+
+Develop an experimental AI agent that leverages LangChain, OpenAI, and FAISS to process user queries, retrieve contextual knowledge, and generate refined answers.
+
+2. Scope
+
+The agent will:
+
+Accept natural language queries from users.
+
+Use local knowledge (PDF embeddings stored in FAISS) for contextual retrieval.
+
+Summarize and answer queries with the help of an LLM.
+
+Use a web search tool if local context is insufficient.
+
+Deliver a final, refined, user-friendly answer.
+
+3. Functional Requirements
+
+Input Handling
+
+Accept free-text user queries.
+
+Context Retrieval
+
+Search and retrieve relevant chunks from a local FAISS vector database containing PDF embeddings.
+
+Summarization & Response
+
+Pass retrieved context to an LLM (OpenAI via LangChain) for summarization and initial response generation.
+
+Fallback Search
+
+If the LLM response is incomplete/unsatisfactory:
+
+Call a web search tool to fetch additional context.
+
+Merge new context with prior retrieved information.
+
+Final Response
+
+Generate and return a refined, complete answer to the user.
+
+4. Non-Functional Requirements
+
+Accuracy: Responses should be contextually relevant and coherent.
+
+Performance: Query processing should return results within a reasonable time (<5 seconds for local retrieval, <10 seconds with web search).
+
+Scalability: System should handle multiple queries concurrently.
+
+Modularity: Each component (FAISS, LLM, Web Search) should be loosely coupled for future upgrades.
+
+5. Technology Stack
+
+LangChain: Agent orchestration.
+
+OpenAI LLM (GPT models): Summarization and response generation.
+
+FAISS: Vector database for PDF embeddings.
+
+Web Search Tool: Fallback context retrieval.
+
+6. Success Criteria
+
+80% of user queries satisfactorily answered from FAISS context alone.
+
+Smooth fallback to web search when required.
+
+Final answers must be clear, concise, and contextually correct.
