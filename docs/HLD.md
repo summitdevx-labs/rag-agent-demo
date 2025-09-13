@@ -21,7 +21,7 @@ flowchart LR
     L["LLM Summarization & Response (OpenAI via LangChain)"]
     W["Web Search Fallback (if local context insufficient)"]
     A["Final Consolidated Answer (User-friendly Output)"]
-    M["["Modular Design (Swap DB, LLM, Search)"]]
+    M["Modular Design (Swap DB, LLM, Search)"]
 
     Q -->|retrieve context| F
     F -->|summarize & answer| L
