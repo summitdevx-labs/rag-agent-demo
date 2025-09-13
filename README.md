@@ -28,6 +28,8 @@ Table of contents
 
 - [How it works (workflow)](#how-it-works-workflow)
 
+- [High-Level Design (HLD)](docs/HLD.md)
+
 - [Component responsibilities](#component-responsibilities)
 
 - [Success criteria & SLAs](#success-criteria--slas)
