@@ -17,11 +17,11 @@ This document describes the high-level architecture of the **Experimental AI Age
 ```mermaid
 flowchart LR
     Q[📥 Natural-language User Queries]
-    F[📂 Local Context Retrieval<br/>(FAISS - PDF Embeddings)]
-    L[🧠 LLM Summarization & Response<br/>(OpenAI via LangChain)]
-    W[🌐 Web Search Fallback<br/>(if local context insufficient)]
-    A[✅ Final Consolidated Answer<br/>(User-friendly Output)]
-    M[[⚙️ Modular Design<br/>(Swap DB, LLM, Search)]]
+    F[📂 Local Context Retrieval\n(FAISS - PDF Embeddings)]
+    L[🧠 LLM Summarization & Response\n(OpenAI via LangChain)]
+    W[🌐 Web Search Fallback\n(if local context insufficient)]
+    A[✅ Final Consolidated Answer\n(User-friendly Output)]
+    M[[⚙️ Modular Design\n(Swap DB, LLM, Search)]]
 
     Q -->|retrieve context| F
     F -->|summarize & answer| L
